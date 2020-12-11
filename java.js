@@ -114,6 +114,20 @@ function sumMinMax(arr) {
 	return min + max;
 }
 
+//13.Functia hasDuplicates
+
+function hasDuplicates(array) {
+    let valuesSoFar = Object.create(null);
+    for (let i = 0; i < array.length; ++i) {
+        let value = array[i];
+        if (value in valuesSoFar) {
+            return true;
+        }
+        valuesSoFar[value] = true;
+    }
+    return false;
+}
+
 
 //14. Functia produsPozitive
 function produsPozitive(arr) {
